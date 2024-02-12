@@ -1,0 +1,32 @@
+{
+    "id": "com.valvesoftware.Steam.Utility.Lumafly",
+    "default-branch": "stable",
+    "runtime": "com.valvesoftware.Steam",
+    "runtime-version": "stable",
+    "sdk": "org.freedesktop.Sdk//23.08",
+    "build-extension": true,
+    "appstream-compose": false,
+    "seperate-locales": false,
+    "build-options": {
+        "prefix": "/app/utils/Lumafly",
+        "prepend-path": "/app/utils/Lumafly/bin"
+    },
+    "modules": [
+        {
+            "name": "lumafly",
+            "buildsystem": "simple",
+            "build-commands": [
+                "unzip -j Lumafly-Linux.zip Lumafly",
+                "install -Dm755 Lumafly /app/utils/Lumafly/bin/Lumafly"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://github.com/TheMulhima/Lumafly/releases/download/v3.2.0.0/Lumafly-Linux.zip",
+                    "sha256": "af11c57f9d0810f2abb7d1ced21583a105ae2eca4905aafd4f2f23e8189e9ec1"
+                }
+            ]
+        }
+    ]
+
+}

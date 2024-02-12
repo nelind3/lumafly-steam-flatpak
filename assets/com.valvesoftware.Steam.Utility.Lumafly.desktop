@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Verion=3.2.0.0
+Name=Lumafly
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/utils/Lumafly/bin/Lumafly com.valvesoftware.Steam
+Icon=io.github.themulhima.Lumafly
+Categories=Game;
+Terminal=false
